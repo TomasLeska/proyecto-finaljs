@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Emtech Store</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">Emtech Store</h1>
+        <span><figure id="logo"><img class="logotipo" src="./images/logo.png" alt="Logo"></figure></span>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./pages/login.html">Login</a></li>
+        </ul>
+    </nav>
+    <h3 class="filtro">Seleccionar</h3>
+    <select id="filtroProducto">
+        <option value="all">Todos</option>
+        <option value="Razer">Razer</option>
+        <option value="Logitech">Logitech</option>
+        <option value="HyperX">HyperX</option>
+        <option value="Red-dragon">Red-dragon</option>
+    </select>
+
+
+    <main id="contenedor-productos">
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <div class="productoEnCarrito">
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> 
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./modal.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
